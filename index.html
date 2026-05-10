@@ -1,0 +1,1115 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enciclopedia Dragon Ball Wiki Hispano</title>
+    <link rel="icon" href="fav.ico">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- Loader Overlay -->
+    <div id="globalLoader" class="loader-container">
+        <div class="db-spinner"></div>
+        <div class="loading-text">Cargando Datos de la Wiki...</div>
+    </div>
+
+    <div class="creator-banner py-2 text-center bg-black border-bottom border-warning">
+        <div class="container d-flex align-items-center justify-content-center">
+            <img src="akira.webp" alt="Akira Toriyama" class="rounded-circle me-3 border border-warning"
+                style="width: 60px; height: 60px; object-fit: cover;">
+            <p class="mb-0 fw-bold">Akira Toriyama (1955-2024) - El Legado ContinÃºa en esta Enciclopedia</p>
+        </div>
+    </div>
+
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top border-bottom border-secondary shadow">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#" onclick="showSection('inicio')">
+                <img src="https://drive.google.com/uc?export=view&id=1Rq6vNw7AHXc_CezyvKidTta7pLngUQQP" alt="Dragon Ball" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-bold text-uppercase" style="font-size: 0.8rem;">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio"
+                            onclick="showSection('inicio')">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#personajes"
+                            onclick="showSection('personajes')">Personajes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#razas" onclick="showSection('razas')">Razas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#transformaciones"
+                            onclick="showSection('transformaciones')">Transf.</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnicas"
+                            onclick="showSection('tecnicas')">TÃ©cnicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sagas" onclick="showSection('sagas')">Sagas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#esferas"
+                            onclick="showSection('esferas')">Esferas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#universos"
+                            onclick="showSection('universos')">Universos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#serie" onclick="showSection('serie')">Series</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#manga" onclick="showSection('manga')">Manga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#peliculas"
+                            onclick="showSection('peliculas')">PelÃ­culas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#videojuegos"
+                            onclick="showSection('videojuegos')">Juegos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center d-flex align-items-center justify-content-center mb-5">
+        <div class="hero-content" data-aos="zoom-in">
+            <h1 class="display-1 fw-black text-warning text-shadow">DRAGON BALL WIKI HISPANO</h1>
+            <p class="lead fw-light">La enciclopedia definitiva con toda la informaciÃ³n del universo</p>
+            <a href="#personajes" class="btn btn-warning btn-lg px-5 py-3 fw-bold rounded-pill shadow-lg mt-3"
+                onclick="showSection('personajes')">EXPLORAR PERSONAJES</a>
+        </div>
+    </header>
+
+    <main class="container py-5">
+
+        <!-- Inicio Section -->
+        <section id="inicio" class="section-content">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="display-4 fw-bold text-warning mb-4">El Universo de Akira Toriyama</h2>
+                    <p class="lead">Dragon Ball es un manga escrito e ilustrado por Akira Toriyama. Fue publicado
+                        originalmente en la revista ShÅnen Jump, de la editorial japonesa ShÅ«eisha, entre 1984 y 1995.
+                        Su trama describe las aventuras de Goku, un guerrero saiyajin, cuyo fin es proteger a la Tierra
+                        de otros seres que quieren conquistarla y exterminar a la humanidad.</p>
+                    <p>Conforme transcurre la trama, conoce a otros personajes que le ayudan en este propÃ³sito. El
+                        nombre de la serie proviene de unas esferas mÃ¡gicas que al ser reunidas invocan a un dragÃ³n que
+                        concede deseos.</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card bg-dark-secondary border-warning p-4 shadow-lg rounded-4">
+                        <h4 class="text-warning mb-3">EstadÃ­sticas de la Enciclopedia</h4>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            <li
+                                class="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between align-items-center">
+                                Personajes Registrados <span class="badge bg-warning text-dark rounded-pill">30</span>
+                            </li>
+                            <li
+                                class="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between align-items-center">
+                                Transformaciones Mapeadas <span
+                                    class="badge bg-warning text-dark rounded-pill">25+</span>
+                            </li>
+                            <li
+                                class="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between align-items-center">
+                                TÃ©cnicas Listadas <span class="badge bg-warning text-dark rounded-pill">40+</span>
+                            </li>
+                            <li
+                                class="list-group-item bg-transparent text-light border-secondary d-flex justify-content-between align-items-center">
+                                Universos Conocidos <span class="badge bg-warning text-dark rounded-pill">12</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <h3 class="text-warning fw-bold mt-5 mb-4 text-center" data-aos="fade-up">ðŸ“… LÃ­nea Temporal de la Franquicia
+            </h3>
+            <div class="timeline" data-aos="fade-up">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1984</h4>
+                        <p>Akira Toriyama publica el primer capÃ­tulo del manga Dragon Ball en la revista ShÅnen Jump.
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1986</h4>
+                        <p>Se estrena el anime Dragon Ball con 153 episodios. Comienza la era de Goku niÃ±o.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1989</h4>
+                        <p>Dragon Ball Z revoluciona el anime con las sagas de los Saiyajin, Freezer, Cell y Buu.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>1996</h4>
+                        <p>Se estrena Dragon Ball GT, la secuela animada con Goku SSJ4.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2015</h4>
+                        <p>Dragon Ball Super comienza. Goku alcanza el Super Saiyan Blue y el Ultra Instinto.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>2024</h4>
+                        <p>Fallece Akira Toriyama. Estreno de Dragon Ball Daima y Sparking! ZERO.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personajes Section -->
+        <section id="personajes" class="section-content d-none">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+                <div>
+                    <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 m-0">Base de
+                        Datos de Personajes</h2>
+                    <p class="text-secondary ms-3 mb-0">InformaciÃ³n detallada, tÃ©cnicas y transformaciones.</p>
+                </div>
+                <div class="d-flex gap-2 align-items-center flex-wrap">
+                    <input type="text" id="searchBarPersonajes"
+                        class="form-control bg-dark text-light border-warning shadow-sm" style="max-width:300px;"
+                        placeholder="Buscar personaje, raza o universo...">
+                </div>
+            </div>
+            <div class="row g-4" id="charactersContainer">
+                <!-- DinÃ¡mico via api.js -->
+            </div>
+        </section>
+
+        <!-- Razas Section -->
+        <section id="razas" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Razas del Universo
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow p-3">
+                        <h3 class="text-warning">Saiyan</h3>
+                        <p>Raza guerrera extinta casi en su totalidad. Conocidos por su sed de combate, poder latente
+                            (Zenkai) y la capacidad de transformarse en Super Saiyan. Planeta original: Sadala/Vegeta.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow p-3">
+                        <h3 class="text-warning">Namekianos</h3>
+                        <p>Raza pacÃ­fica de aspecto verde con habilidades mÃ¡gicas y regenerativas. Son los creadores
+                            originales de las Esferas del DragÃ³n. No tienen gÃ©nero y se reproducen por huevos.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow p-3">
+                        <h3 class="text-warning">Raza de Freezer</h3>
+                        <p>Mutantes con gran capacidad de supervivencia en el espacio. Poseen mÃºltiples transformaciones
+                            para contener su desmesurado poder base.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow p-3">
+                        <h3 class="text-warning">Humanos (TerrÃ­colas)</h3>
+                        <p>Habitantes del Planeta Tierra. Aunque dÃ©biles en comparaciÃ³n con otras razas guerreras,
+                            tienen una gran capacidad para inventar tecnologÃ­a y aprender el control del Ki.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow p-3">
+                        <h3 class="text-warning">Ãngeles</h3>
+                        <p>Deidades asistentes y maestros de los Dioses de la DestrucciÃ³n. Permanecen neutrales y poseen
+                            el estado perpetuo del Ultra Instinto.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow p-3">
+                        <h3 class="text-warning">Majin</h3>
+                        <p>Seres mÃ¡gicos creados u originados a partir de Majin Buu. Tienen cuerpos maleables,
+                            capacidades curativas extremas y magia de transmutaciÃ³n.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transformaciones Section -->
+        <section id="transformaciones" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Transformaciones y
+                Estados</h2>
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="card bg-dark-secondary border-secondary p-4">
+                        <h4 class="text-warning">EvoluciÃ³n Saiyan</h4>
+                        <ul class="list-unstyled">
+                            <li><strong class="text-info">Super Saiyan:</strong> Multiplica el poder base por 50.
+                                Cabello dorado y aura amarilla.</li>
+                            <li><strong class="text-info">Super Saiyan 2:</strong> Multiplica el poder base por 100.
+                                Aura con descargas elÃ©ctricas.</li>
+                            <li><strong class="text-info">Super Saiyan 3:</strong> Multiplica el poder base por 400.
+                                Cabello largo y pÃ©rdida de cejas. Consume mucha energÃ­a.</li>
+                            <li><strong class="text-info">Super Saiyan God:</strong> Estado divino. Aura llameante y
+                                cabello rojo. Permite sentir el Ki divino.</li>
+                            <li><strong class="text-info">Super Saiyan Blue:</strong> Super Saiyan canalizando el Ki
+                                divino. Cabello y aura azul.</li>
+                            <li><strong class="text-info">Super Saiyan 4 (GT):</strong> TransformaciÃ³n primordial
+                                combinando el poder del Ozaru con el estado Super Saiyan. Pelaje rojo.</li>
+                        </ul>
+                        <h4 class="text-warning mt-4">Estados Divinos Superiores</h4>
+                        <ul class="list-unstyled">
+                            <li><strong class="text-secondary">Ultra Instinto (Doctrina EgoÃ­sta):</strong> Estado de los
+                                Ãngeles. El cuerpo reacciona de forma autÃ³noma a los ataques sin necesidad de pensar.
+                                Cabello plateado.</li>
+                            <li><strong class="text-purple" style="color: #a855f7;">Ultra Ego (Doctrina del
+                                    EgoÃ­sta):</strong> Estado de los Dioses de la DestrucciÃ³n. Cuanto mÃ¡s daÃ±o recibe el
+                                usuario, mÃ¡s fuerte se vuelve. Cabello morado y falta de cejas (usado por Vegeta).</li>
+                            <li><strong class="text-success">Estado Bestia:</strong> EvoluciÃ³n Ãºnica del potencial
+                                latente de Gohan. Cabello gris/blanco, aura rojiza y ojos rojos.</li>
+                            <li><strong class="text-orange" style="color: #f57c00;">Piccolo Naranja:</strong> Despertar
+                                mÃ¡gico del potencial Namekiano otorgado por Shenlong. Piel naranja y gran corpulencia.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TÃ©cnicas Section -->
+        <section id="tecnicas" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">TÃ©cnicas IcÃ³nicas
+            </h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-info">Kamehameha</h4>
+                        <p>RÃ¡faga de energÃ­a concentrada inventada por el Maestro Roshi tras 50 aÃ±os. TÃ©cnica insignia
+                            de Goku.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-info">Genkidama</h4>
+                        <p>Esfera de energÃ­a pura recolectada de la energÃ­a vital de los seres vivos. Solo los de
+                            corazÃ³n puro pueden formarla.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-warning">Final Flash</h4>
+                        <p>TÃ©cnica suprema de Vegeta. Un rayo masivo de energÃ­a concentrada con enorme poder
+                            destructivo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-warning">Makankosappo</h4>
+                        <p>Rayo perforador de Piccolo. Requiere cargar energÃ­a con dos dedos en la frente. Fue usada
+                            para matar a Raditz (y a Goku).</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-success">TeletransportaciÃ³n (Shunkan Ido)</h4>
+                        <p>TÃ©cnica aprendida por Goku en el planeta Yardrat. Permite viajar al instante a cualquier
+                            lugar si se capta el Ki de una persona allÃ­.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-success">Kaioken</h4>
+                        <p>TÃ©cnica de apoyo inventada por el Kaio del Norte. Multiplica la fuerza, velocidad y sentidos
+                            del usuario a cambio de gran estrÃ©s fÃ­sico.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-danger">Kienzan (Disco Destructor)</h4>
+                        <p>TÃ©cnica de Krillin. Un disco de Ki afilado como una cuchilla capaz de cortar casi cualquier
+                            material o enemigo, sin importar la diferencia de poder.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-secondary p-3">
+                        <h4 class="text-danger">Taiyoken (Bengala Solar)</h4>
+                        <p>Inventada por la Escuela Grulla (Tenshinhan). Un destello de luz intensa que ciega
+                            temporalmente al oponente. Muy usada para escapar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sagas Section -->
+        <section id="sagas" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Arcos Argumentales
+                (Sagas)</h2>
+            <div class="accordion" id="accordionSagas">
+                <!-- Dragon Ball -->
+                <div class="accordion-item bg-dark-secondary border-secondary">
+                    <h2 class="accordion-header"><button class="accordion-button bg-dark text-warning" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#saga1">Sagas de Dragon Ball ClÃ¡sico</button></h2>
+                    <div id="saga1" class="accordion-collapse collapse show" data-bs-parent="#accordionSagas">
+                        <div class="accordion-body text-light">
+                            <ul>
+                                <li><strong>Emperador Pilaf:</strong> BÃºsqueda inicial de las Esferas del DragÃ³n.</li>
+                                <li><strong>21Â° Torneo de las Artes Marciales:</strong> Goku y Krillin entrenan con
+                                    Roshi y participan en el torneo.</li>
+                                <li><strong>EjÃ©rcito del ListÃ³n Rojo:</strong> Goku destruye la organizaciÃ³n militar mÃ¡s
+                                    grande del mundo.</li>
+                                <li><strong>22Â° Torneo de las Artes Marciales:</strong> Goku contra Tenshinhan y la
+                                    Escuela Grulla.</li>
+                                <li><strong>Rey Demonio Piccolo:</strong> La Tierra se enfrenta a la primera verdadera
+                                    amenaza apocalÃ­ptica.</li>
+                                <li><strong>23Â° Torneo de las Artes Marciales:</strong> Goku, ahora adulto, se enfrenta
+                                    a Piccolo Jr. (Majunior).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dragon Ball Z -->
+                <div class="accordion-item bg-dark-secondary border-secondary">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed bg-dark text-warning"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#saga2">Sagas de Dragon Ball
+                            Z</button></h2>
+                    <div id="saga2" class="accordion-collapse collapse" data-bs-parent="#accordionSagas">
+                        <div class="accordion-body text-light">
+                            <ul>
+                                <li><strong>Saiyajin:</strong> Llegada de Raditz, revelaciÃ³n del origen de Goku, y
+                                    batalla contra Nappa y Vegeta.</li>
+                                <li><strong>Freezer (Namek):</strong> Viaje a Namek, batalla contra las Fuerzas
+                                    Especiales Ginyu y Freezer. Goku alcanza el legendario Super Saiyan.</li>
+                                <li><strong>Androides y Cell:</strong> Llegada de Trunks del Futuro, los Androides del
+                                    Dr. Gero y los Juegos de Cell. Gohan alcanza el SSJ2.</li>
+                                <li><strong>Majin Buu:</strong> AÃ±os despuÃ©s, Babidi despierta al monstruo Buu. Aparecen
+                                    las fusiones (Gotenks, Vegito) y la Genkidama final.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dragon Ball Super -->
+                <div class="accordion-item bg-dark-secondary border-secondary">
+                    <h2 class="accordion-header"><button class="accordion-button collapsed bg-dark text-warning"
+                            type="button" data-bs-toggle="collapse" data-bs-target="#saga3">Sagas de Dragon Ball
+                            Super</button></h2>
+                    <div id="saga3" class="accordion-collapse collapse" data-bs-parent="#accordionSagas">
+                        <div class="accordion-body text-light">
+                            <ul>
+                                <li><strong>Dios de la DestrucciÃ³n Beerus:</strong> Beerus busca al Dios Super Saiyan.
+                                </li>
+                                <li><strong>ResurrecciÃ³n de 'F':</strong> Freezer vuelve a la vida con una nueva
+                                    evoluciÃ³n.</li>
+                                <li><strong>Torneo del Universo 6:</strong> Torneo entre el Universo 6 (Champa) y 7
+                                    (Beerus).</li>
+                                <li><strong>Goku Black (Trunks del Futuro):</strong> Un ser idÃ©ntico a Goku destruye el
+                                    futuro. Zamasu intenta erradicar a los mortales.</li>
+                                <li><strong>Torneo de la Fuerza (Supervivencia Universal):</strong> 8 universos pelean
+                                    en un Battle Royale para evitar ser borrados por Zeno-sama.</li>
+                                <li><strong>Prisionero de la Patrulla GalÃ¡ctica (Manga):</strong> Moro, un devorador de
+                                    planetas mÃ¡gico escapa.</li>
+                                <li><strong>El Superviviente Granolah (Manga):</strong> Granolah busca venganza contra
+                                    los Saiyan usando las esferas del dragÃ³n de Cereal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Esferas Section -->
+        <section id="esferas" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Artefactos:
+                Esferas del DragÃ³n</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-warning p-3">
+                        <h4 class="text-warning">Esferas de la Tierra</h4>
+                        <p>Creadas por Kamisama (y luego mejoradas por Dende). Invocan a <strong>Shenlong</strong>.
+                            Conceden de 1 a 3 deseos dependiendo de cuÃ¡nta energÃ­a requieran, no pueden revivir a
+                            alguien muerto por causas naturales o que ya haya sido revivido antes por ellas
+                            (originalmente).</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-success p-3">
+                        <h4 class="text-success">Esferas de Namek</h4>
+                        <p>Creadas por el Gran Patriarca. MÃ¡s grandes. Invocan a <strong>Porunga</strong> (requiere
+                            contraseÃ±a en idioma namekiano). Conceden 3 deseos y pueden revivir a la misma persona
+                            varias veces, originalmente solo a una persona por deseo, pero luego fueron mejoradas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-info p-3">
+                        <h4 class="text-info">Super Esferas del DragÃ³n</h4>
+                        <p>Creadas por el Dios DragÃ³n Zarama. Del tamaÃ±o de planetas y repartidas entre los Universos 6
+                            y 7. Invocan a <strong>Super Shenlong</strong> (requiere el lenguaje de los dioses). Concede
+                            1 deseo sin ningÃºn lÃ­mite o restricciÃ³n.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card bg-dark-secondary border-danger p-3">
+                        <h4 class="text-danger">Esferas del Planeta Cereal</h4>
+                        <p>Aparecen en el manga. Creadas por Monaito. Solo son dos esferas (tamaÃ±o canica). Invocan a
+                            <strong>Trombo</strong>. Pueden conceder deseos muy poderosos como "ser el guerrero mÃ¡s
+                            fuerte del universo", pero a cambio de sacrificar la esperanza de vida del usuario.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Universos Section -->
+        <section id="universos" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">El Multiverso (Los
+                12 Universos)</h2>
+            <p class="lead">El mundo de Dragon Ball Super se rige por un multiverso de 12 universos. Los universos cuya
+                suma da 13 son "gemelos" (ej. 6 y 7, 2 y 11) compartiendo razas y similitudes.</p>
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered border-secondary mt-3">
+                    <thead>
+                        <tr>
+                            <th class="text-warning">Universo</th>
+                            <th class="text-warning">Dios de la DestrucciÃ³n</th>
+                            <th class="text-warning">Ãngel</th>
+                            <th class="text-warning">CaracterÃ­stica</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Universo 1</td>
+                            <td>Iwan</td>
+                            <td>Awamo</td>
+                            <td>Universo Supremo (Exento del Torneo)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 2</td>
+                            <td>Heles</td>
+                            <td>Sour</td>
+                            <td>Universo de la Bondad / Amor</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 3</td>
+                            <td>Mosco</td>
+                            <td>Campari</td>
+                            <td>Universo de la Supervivencia (MÃ¡quinas)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 4</td>
+                            <td>Quitela</td>
+                            <td>Cognac</td>
+                            <td>Universo de la ConspiraciÃ³n</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 5</td>
+                            <td>Arak</td>
+                            <td>Cukatail</td>
+                            <td>Universo Equilibrado (Exento del Torneo)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 6</td>
+                            <td>Champa</td>
+                            <td>Vados</td>
+                            <td>Universo Desafiante (Gemelo del 7, hogar de Cabba, Hit)</td>
+                        </tr>
+                        <tr>
+                            <td><strong class="text-warning">Universo 7</strong></td>
+                            <td><strong class="text-warning">Beerus</strong></td>
+                            <td><strong class="text-warning">Whis</strong></td>
+                            <td><strong class="text-warning">Nuestro Universo. Nivel mortal: 3.18</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Universo 8</td>
+                            <td>Liquiir</td>
+                            <td>Korn</td>
+                            <td>Universo Diligente (Exento del Torneo)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 9</td>
+                            <td>Sidra</td>
+                            <td>Mojito</td>
+                            <td>Universo Improvisado (Nivel mÃ¡s bajo)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 10</td>
+                            <td>Rumsshi</td>
+                            <td>Cus</td>
+                            <td>Universo Macho (Hogar de Zamasu)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 11</td>
+                            <td>Belmod</td>
+                            <td>Marcarita</td>
+                            <td>Universo de la Justicia (Tropas del Orgullo, Jiren)</td>
+                        </tr>
+                        <tr>
+                            <td>Universo 12</td>
+                            <td>Geen</td>
+                            <td>Martinu</td>
+                            <td>Universo Definitivo (Exento del Torneo)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Serie Section -->
+        <section id="serie" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Series Animadas
+                Oficiales</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="img/clasico.webp" class="card-img-top" alt="Dragon Ball"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball</h3>
+                            <p class="small text-light">Abarca desde el encuentro de Goku y Bulma hasta la derrota de
+                                Piccolo Jr. Enfocado en aventura y artes marciales terrestres.</p>
+                            <span class="badge bg-warning text-dark">153 CapÃ­tulos (1986-1989)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="https://drive.google.com/uc?export=view&id=1sk_RHuD7tLc0junztslnag4CgCisW0hy" class="card-img-top" alt="Dragon Ball Z"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball Z</h3>
+                            <p class="small text-light">Abarca la etapa adulta de Goku, la revelaciÃ³n de su origen
+                                extraterrestre y batallas a escala planetaria/galÃ¡ctica.</p>
+                            <span class="badge bg-warning text-dark">291 CapÃ­tulos (1989-1996)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="img/gt.jpe" class="card-img-top" alt="Dragon Ball GT"
+                            onerror="this.src='https://via.placeholder.com/300x250/111/f57c00?text=DB+GT'"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball GT</h3>
+                            <p class="small text-light">Secuela original de Toei Animation (No canon del manga
+                                original). Goku vuelve a ser niÃ±o. Introduce el Super Saiyan 4.</p>
+                            <span class="badge bg-warning text-dark">64 CapÃ­tulos (1996-1997)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="img/kai.jpg" class="card-img-top" alt="Dragon Ball Kai"
+                            onerror="this.src='https://via.placeholder.com/300x250/111/f57c00?text=DB+Kai'"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball Z Kai</h3>
+                            <p class="small text-light">RemasterizaciÃ³n en HD de DBZ para el 20Â° aniversario. Elimina el
+                                relleno para ser mÃ¡s fiel al manga de Toriyama.</p>
+                            <span class="badge bg-warning text-dark">167 CapÃ­tulos (2009-2015)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="https://drive.google.com/uc?export=view&id=1LU6auOSGf5z2bzTEOS-O4d0gsc8AV3Ux" class="card-img-top" alt="Dragon Ball Super"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball Super</h3>
+                            <p class="small text-light">ContinuaciÃ³n oficial canon de la historia tras la derrota de
+                                Majin Buu. Expande el lore con el Multiverso y los Dioses.</p>
+                            <span class="badge bg-warning text-dark">131 CapÃ­tulos (2015-2018)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="img/daima.webp" class="card-img-top" alt="Dragon Ball Daima"
+                            onerror="this.src='https://via.placeholder.com/300x250/111/f57c00?text=DB+DAIMA'"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball Daima</h3>
+                            <p class="small text-light">Nueva serie oficial por el 40Â° aniversario. Una conspiraciÃ³n
+                                convierte a Goku y sus amigos en pequeÃ±os.</p>
+                            <span class="badge bg-warning text-dark">2024 - Presente</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="https://via.placeholder.com/300x250/111/f57c00?text=DB+Heroes" class="card-img-top"
+                            alt="Super Dragon Ball Heroes"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Super Dragon Ball Heroes</h3>
+                            <p class="small text-light">Anime promocional basado en el videojuego de cartas arcade.
+                                Explora misiones no canÃ³nicas con transformaciones Ãºnicas.</p>
+                            <span class="badge bg-warning text-dark">50+ CapÃ­tulos (2018-Presente)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow">
+                        <img src="https://via.placeholder.com/300x250/111/f57c00?text=DB+AF" class="card-img-top"
+                            alt="Dragon Ball AF"
+                            style="height: 250px; object-fit: contain; padding: 10px; background: #000;">
+                        <div class="card-body">
+                            <h3 class="h4 text-warning fw-bold">Dragon Ball AF (Fan-Made)</h3>
+                            <p class="small text-light">Mito de Internet que cobrÃ³ vida a travÃ©s del manga fan-made de
+                                Toyotaro (creador de Super). Introduce el Super Saiyan 5.</p>
+                            <span class="badge bg-warning text-dark">No Oficial</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manga Section -->
+        <section id="manga" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Mangas Oficiales y
+                Fan-Mades</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="img/mangaclasico.png" class="card-img-top" alt="Dragon Ball Manga"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">Dragon Ball (Original)</h3>
+                            <p class="text-light small">Escrito e ilustrado por Akira Toriyama. Fue publicado en la
+                                revista ShÅnen Jump de ShÅ«eisha entre 1984 y 1995.</p>
+                            <ul class="text-light small">
+                                <li><strong>VolÃºmenes (TankÅbon):</strong> 42 tomos.</li>
+                                <li><strong>CapÃ­tulos:</strong> 519 capÃ­tulos.</li>
+                                <li><strong>EdiciÃ³n Kanzenban:</strong> 34 tomos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="https://drive.google.com/uc?export=view&id=1LU6auOSGf5z2bzTEOS-O4d0gsc8AV3Ux" class="card-img-top" alt="Dragon Ball Super Manga"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">Dragon Ball Super</h3>
+                            <p class="text-light small">Secuela oficial escrita por Akira Toriyama e ilustrada por su
+                                sucesor, Toyotaro. Publicado mensualmente en la revista V-Jump desde 2015.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="img/af.jpg" class="card-img-top" alt="Dragon Ball AF Manga"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">Dragon Ball AF</h3>
+                            <p class="text-light small">Obra fan-made creada originalmente por Toyble (quien luego serÃ­a
+                                Toyotaro) y Young Jijii. ContinÃºa la historia despuÃ©s de DBGT.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="img/kakumai.jpg" class="card-img-top" alt="Dragon Ball Kakumei"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">Dragon Ball Kakumei</h3>
+                            <p class="text-light small">Excelente manga fan-made que explora las consecuencias del
+                                Torneo de la Fuerza y los universos restaurados.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="img/multiverse.jpg" class="card-img-top" alt="Dragon Ball Multiverse"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">Dragon Ball Multiverse</h3>
+                            <p class="text-light small">Uno de los fan-mangas mÃ¡s famosos. Un enorme torneo multiversal
+                                organizado por los Vargas entre decenas de universos alternativos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="img/dbxsai.jpg" class="card-img-top" alt="Dragon Ball x Saitama"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">Dragon Ball x Saitama</h3>
+                            <p class="text-light small">Crossover fan-made que enfrenta a los universos de Dragon Ball y
+                                One Punch Man con un gran nivel artÃ­stico.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card bg-dark-secondary border-secondary h-100 shadow overflow-hidden">
+                        <img src="https://drive.google.com/uc?export=view&id=1Ucj90qCRunNLccmBamHd-3maGQP2GA9x" class="card-img-top" alt="Dragon Ball: El renacer de Yamcha"
+                            style="height: 250px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h4 fw-bold">DB: Renacer de Yamcha</h3>
+                            <p class="text-light small">Manga oficial (spin-off) donde un estudiante fan de Dragon Ball
+                                reencarna en el cuerpo de Yamcha y usa su conocimiento de la serie para sobrevivir.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="peliculas" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">PelÃ­culas de
+                AnimaciÃ³n (Completas)</h2>
+            <p class="text-light mb-4">La franquicia cuenta con mÃ¡s de 20 pelÃ­culas. A continuaciÃ³n, la lista completa
+                de pelÃ­culas de Dragon Ball, Z y Super.</p>
+            <div class="row g-4" id="peliculasList">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="img/peli1.webp"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">1. La Leyenda de Shenlong</h4>
+                            <p class="small text-light mb-0">(Dragon Ball)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1Yhtd75UnoUgdHxeJJS8IeDnAS20X5u7O"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">2. La Princesa Durmiente</h4>
+                            <p class="small text-light mb-0">(Dragon Ball)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1vdukB3FoFKOewaWd4za-1Qe793mmRCuO"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">3. Aventura MÃ­stica</h4>
+                            <p class="small text-light mb-0">(Dragon Ball)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1kv0-M5kuwkQKEV8zMuH0Fmc4q-Ku0ujK"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">4. El Camino Hacia el Poder</h4>
+                            <p class="small text-light mb-0">(Dragon Ball)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1msJ6i3_F-OaBOWQVRG4fvKtFjkF6jfZg"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">5. DevuÃ©lvanme a mi Gohan</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1aUuKp0ekK4q9qykIA-ov3QuovAyd-TXh"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">6. El hombre mÃ¡s fuerte...</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1kLDjDs91N0qm85BoLVbH3Al09v4LN_pa"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">7. La sÃºper batalla decisiva</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1R9BYS8ZqtUZ2C0Nu36zVGOf4pPdMreWU"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">8. El sÃºper guerrero Son Goku</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1WBJj1qH5gtPbyfyWMoDcMY2F0ySpyHj0"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">9. Los rivales mÃ¡s poderosos</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1Yct44chN74cdxfZ9bNYF1ivkY8GyhuLY"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">10. El regreso de Cooler</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1C_ot9R07D6yvo2AXiAw7uztJaZk8zhk_"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">11. Pelea de tres Saiyajin</h4>
+                            <p class="small text-light mb-0">(Dragon Ball Z)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1s9xEKPOGc-1nulMQG0Cuef_bzGSBBw_U"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">12. El poder invencible</h4>
+                            <p class="small text-light mb-0">Broly (DBZ)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1PYOnYKFLEcU-pXcVFhVwL_1GJF8CoejI"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">13. La galaxia corre peligro</h4>
+                            <p class="small text-light mb-0">Bojack (DBZ)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1c0gsVhK-24jp79MqRrZkZZV33yqBTCHF"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">14. El regreso del guerrero</h4>
+                            <p class="small text-light mb-0">Broly (DBZ)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1zhU7lVBjEiiViivwCBjRw_rxvS6FuIMI"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">15. El combate definitivo</h4>
+                            <p class="small text-light mb-0">Bio-Broly (DBZ)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=10g1s8cP-wgrt3x4P-EQKQQdNj87GBXqM"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">16. El renacer de la fusiÃ³n</h4>
+                            <p class="small text-light mb-0">Janemba y Gogeta (DBZ)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow"><img src="https://drive.google.com/uc?export=view&id=1YzWZBnF5SVHQ76ZtHzGo_d9--o8AvU3S"
+                            class="card-img-top" style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">17. El Ataque del DragÃ³n</h4>
+                            <p class="small text-light mb-0">Tapion y Hirudegarn (DBZ)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow border-warning"><img
+                            src="https://drive.google.com/uc?export=view&id=1BXVTWTH1_wW205QretsCiGiwLq5fTxPH" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">18. La Batalla de los Dioses</h4>
+                            <p class="small text-light mb-0">Inicio de Super (Canon)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow border-warning"><img
+                            src="https://drive.google.com/uc?export=view&id=132tuEe-NXEG0zbYYZb307YFL433YTok9" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">19. ResurrecciÃ³n de 'F'</h4>
+                            <p class="small text-light mb-0">Freezer Golden (Canon)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow border-warning"><img
+                            src="https://drive.google.com/uc?export=view&id=13bM-a9y8l72FiBD0-ZY5qr1HqOQV9Qck" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">20. DBS: Broly (2018)</h4>
+                            <p class="small text-light mb-0">Gogeta vs Broly (Canon)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow border-warning"><img
+                            src="https://drive.google.com/uc?export=view&id=1--0Hiil4UtBmw8ktiXNCla9m1edyCby2" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-3">
+                            <h4 class="h6 text-warning fw-bold">21. DBS: Super Hero (2022)</h4>
+                            <p class="small text-light mb-0">Gohan Bestia (Canon)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videojuegos Section -->
+        <section id="videojuegos" class="section-content d-none">
+            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Franquicias de
+                Videojuegos Principales</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1Q2frh1C-i8lHs2kSVs4nmSuVaqPVBn7m" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Serie Budokai Tenkaichi (Sparking!)</h3>
+                            <p class="text-light small">Juegos de lucha 3D en arenas abiertas famosos por su enorme
+                                cantidad de personajes y espectacularidad (PS2/Wii). ReviviÃ³ recientemente con
+                                <strong>Sparking! ZERO</strong> (2024).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1emM49Xbed6wuzu6W5FP7DXiC2uGydUwM" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Dragon Ball FighterZ (2018)</h3>
+                            <p class="text-light small">Juego de lucha en 2.5D desarrollado por Arc System Works.
+                                Aclamado por su fidelidad visual extrema al anime y sus sÃ³lidas mecÃ¡nicas competitivas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1opHnByooG3XhwoOGb129gvTHK2zemLQz" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Dragon Ball Xenoverse 1 y 2</h3>
+                            <p class="text-light small">Juego de acciÃ³n y RPG. El jugador crea su propio personaje
+                                (Patrullero del Tiempo) para viajar por las diferentes Ã©pocas de DB corrigiendo
+                                alteraciones en la historia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=15n9jmkwKd64AyrYaG1Q3Mo_LTw5LhI4X" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Dragon Ball Z: Kakarot (2020)</h3>
+                            <p class="text-light small">Action RPG que vuelve a contar la historia de Dragon Ball Z de
+                                principio a fin, permitiendo explorar zonas abiertas, pescar, comer y revivir los
+                                momentos icÃ³nicos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1LJjapTQJ28k_6Pt1_vZxFMqBi2wmWx6_" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">MÃ³viles (Dokkan/Legends)</h3>
+                            <p class="text-light small">TÃ­tulos Gacha sumamente rentables. <strong>Dokkan
+                                    Battle</strong> usa mecÃ¡nicas de esferas de ki y cartas, mientras
+                                <strong>Legends</strong> ofrece combates 3D en tiempo real con cartas tÃ¡cticas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=15SZUX8XyEOFjHgV9J8mUFKLLRCrNxEaH" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Super Dragon Ball Heroes</h3>
+                            <p class="text-light small">Juego de arcade exclusivo de JapÃ³n que usa cartas fÃ­sicas.
+                                Famoso por sus transformaciones locas (SSJ3 Bardock, Vegetto Xeno) y tramas (no canon).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1aBMBzvH8LUqDZoxDfdTzednCwXTiahY1" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Serie Budokai ClÃ¡sica</h3>
+                            <p class="text-light small">Saga de PS2 (Budokai 1, 2, 3) que redefiniÃ³ los juegos de DBZ en
+                                3D con un sistema de combate 2.5D y cÃ¡psulas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1GR5bWqLoO7eGdz-yeKOnyJqmqoDsd7JE" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Serie Raging Blast</h3>
+                            <p class="text-light small">Raging Blast 1 y 2 para PS3/Xbox 360, considerados sucesores
+                                espirituales de Tenkaichi en la generaciÃ³n HD.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1VpnGeNTwnoCeF1OIgONFwFXrSiQBCZtY" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Serie Shin Budokai</h3>
+                            <p class="text-light small">TÃ­tulos imprescindibles para PSP, trasladaron la magia del
+                                combate rÃ¡pido a formato portÃ¡til.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1UcPPHRupw_7Cg0bcceCMZux00fbWcLyA" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">TrilogÃ­a Legacy of Goku</h3>
+                            <p class="text-light small">Legacy of Goku I, II y Buu's Fury. RPGs de acciÃ³n clÃ¡sicos que
+                                permitÃ­an explorar la Tierra, Namek y otros lugares.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 bg-dark-secondary border-secondary shadow overflow-hidden"><img
+                            src="https://drive.google.com/uc?export=view&id=1CDaqeXIbeSDIL-cB8Nm72SojEbGHYKGv" class="card-img-top"
+                            style="height: 200px; object-fit: contain; background: #000;">
+                        <div class="card-body p-4">
+                            <h3 class="text-warning h5 fw-bold">Advanced Adventure</h3>
+                            <p class="text-light small">Un beat 'em up para GBA brillante y divertido basado en la etapa
+                                infantil de Goku, de los mÃ¡s queridos por la comunidad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-black py-5 border-top border-warning mt-5">
+        <div class="container text-center">
+            <img src="https://drive.google.com/uc?export=view&id=1Rq6vNw7AHXc_CezyvKidTta7pLngUQQP" alt="Dragon Ball" height="60" class="mb-4">
+            <p class="text-secondary">&copy; 2024 Enciclopedia Dragon Ball Wiki Hispano. Todo el contenido estructurado
+                sobre la gran obra de Akira Toriyama.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top shadow-lg" onclick="scrollToTop()">
+        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+        </svg>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+    <!-- Main Scripts -->
+    <script src="api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

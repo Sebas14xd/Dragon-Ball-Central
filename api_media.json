@@ -1,0 +1,254 @@
+﻿{
+    "series": [
+        {
+            "titulo": "Dragon Ball",
+            "descripcion": "Abarca desde el encuentro de Goku y Bulma hasta la derrota de Piccolo Jr. Enfocado en aventura y artes marciales terrestres.",
+            "imagen": "img/clasico.webp",
+            "info": "153 CapÃ­tulos (1986-1989)"
+        },
+        {
+            "titulo": "Dragon Ball Z",
+            "descripcion": "Abarca la etapa adulta de Goku, la revelaciÃ³n de su origen extraterrestre y batallas a escala planetaria/galÃ¡ctica.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1sk_RHuD7tLc0junztslnag4CgCisW0hy",
+            "info": "291 CapÃ­tulos (1989-1996)"
+        },
+        {
+            "titulo": "Dragon Ball GT",
+            "descripcion": "Secuela original de Toei Animation (No canon del manga original). Goku vuelve a ser niÃ±o. Introduce el Super Saiyan 4.",
+            "imagen": "img/gt.jpe",
+            "info": "64 CapÃ­tulos (1996-1997)"
+        },
+        {
+            "titulo": "Dragon Ball Z Kai",
+            "descripcion": "RemasterizaciÃ³n en HD de DBZ para el 20Â° aniversario. Elimina el relleno para ser mÃ¡s fiel al manga de Toriyama.",
+            "imagen": "img/kai.jpg",
+            "info": "167 CapÃ­tulos (2009-2015)"
+        },
+        {
+            "titulo": "Dragon Ball Super",
+            "descripcion": "ContinuaciÃ³n oficial canon de la historia tras la derrota de Majin Buu. Expande el lore con el Multiverso y los Dioses.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1LU6auOSGf5z2bzTEOS-O4d0gsc8AV3Ux",
+            "info": "131 CapÃ­tulos (2015-2018)"
+        },
+        {
+            "titulo": "Dragon Ball Daima",
+            "descripcion": "Nueva serie oficial por el 40Â° aniversario. Una conspiraciÃ³n convierte a Goku y sus amigos en pequeÃ±os.",
+            "imagen": "img/daima.webp",
+            "info": "2024 - Presente"
+        },
+        {
+            "titulo": "Super Dragon Ball Heroes",
+            "descripcion": "Anime promocional basado en el videojuego de cartas arcade. Explora misiones no canÃ³nicas con transformaciones Ãºnicas.",
+            "imagen": "https://via.placeholder.com/300x250/111/f57c00?text=DB+Heroes",
+            "info": "50+ CapÃ­tulos (2018-Presente)"
+        },
+        {
+            "titulo": "Dragon Ball AF (Fan-Made)",
+            "descripcion": "Mito de Internet que cobrÃ³ vida a travÃ©s del manga fan-made de Toyotaro (creador de Super). Introduce el Super Saiyan 5.",
+            "imagen": "https://via.placeholder.com/300x250/111/f57c00?text=DB+AF",
+            "info": "No Oficial"
+        }
+    ],
+    "mangas": [
+        {
+            "titulo": "Dragon Ball (Original)",
+            "descripcion": "Escrito e ilustrado por Akira Toriyama. Fue publicado en la revista ShÅnen Jump de ShÅ«eisha entre 1984 y 1995.",
+            "imagen": "img/mangaclasico.png"
+        },
+        {
+            "titulo": "Dragon Ball Super",
+            "descripcion": "Secuela oficial escrita por Akira Toriyama e ilustrada por su sucesor, Toyotaro. Publicado mensualmente en la revista V-Jump desde 2015.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1LU6auOSGf5z2bzTEOS-O4d0gsc8AV3Ux"
+        },
+        {
+            "titulo": "Dragon Ball AF",
+            "descripcion": "Obra fan-made creada originalmente por Toyble (quien luego serÃ­a Toyotaro) y Young Jijii. ContinÃºa la historia despuÃ©s de DBGT.",
+            "imagen": "img/af.jpg"
+        },
+        {
+            "titulo": "Dragon Ball Kakumei",
+            "descripcion": "Excelente manga fan-made que explora las consecuencias del Torneo de la Fuerza y los universos restaurados.",
+            "imagen": "img/kakumai.jpg"
+        },
+        {
+            "titulo": "Dragon Ball Multiverse",
+            "descripcion": "Uno de los fan-mangas mÃ¡s famosos. Un enorme torneo multiversal organizado por los Vargas entre decenas de universos alternativos.",
+            "imagen": "img/multiverse.jpg"
+        },
+        {
+            "titulo": "Dragon Ball x Saitama",
+            "descripcion": "Crossover fan-made que enfrenta a los universos de Dragon Ball y One Punch Man con un gran nivel artÃ­stico.",
+            "imagen": "img/dbxsai.jpg"
+        },
+        {
+            "titulo": "DB: Renacer de Yamcha",
+            "descripcion": "Manga oficial (spin-off) donde un estudiante fan de Dragon Ball reencarna en el cuerpo de Yamcha y usa su conocimiento de la serie para sobrevivir.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1Ucj90qCRunNLccmBamHd-3maGQP2GA9x"
+        }
+    ],
+    "peliculas": [
+        {
+            "titulo": "1. La Leyenda de Shenlong",
+            "descripcion": "(Dragon Ball)",
+            "imagen": "img/peli1.webp"
+        },
+        {
+            "titulo": "2. La Princesa Durmiente",
+            "descripcion": "(Dragon Ball)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1Yhtd75UnoUgdHxeJJS8IeDnAS20X5u7O"
+        },
+        {
+            "titulo": "3. Aventura MÃ­stica",
+            "descripcion": "(Dragon Ball)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1vdukB3FoFKOewaWd4za-1Qe793mmRCuO"
+        },
+        {
+            "titulo": "4. El Camino Hacia el Poder",
+            "descripcion": "(Dragon Ball)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1kv0-M5kuwkQKEV8zMuH0Fmc4q-Ku0ujK"
+        },
+        {
+            "titulo": "5. DevuÃ©lvanme a mi Gohan",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1msJ6i3_F-OaBOWQVRG4fvKtFjkF6jfZg"
+        },
+        {
+            "titulo": "6. El hombre mÃ¡s fuerte...",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1aUuKp0ekK4q9qykIA-ov3QuovAyd-TXh"
+        },
+        {
+            "titulo": "7. La sÃºper batalla decisiva",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1kLDjDs91N0qm85BoLVbH3Al09v4LN_pa"
+        },
+        {
+            "titulo": "8. El sÃºper guerrero Son Goku",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1R9BYS8ZqtUZ2C0Nu36zVGOf4pPdMreWU"
+        },
+        {
+            "titulo": "9. Los rivales mÃ¡s poderosos",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1WBJj1qH5gtPbyfyWMoDcMY2F0ySpyHj0"
+        },
+        {
+            "titulo": "10. El regreso de Cooler",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1Yct44chN74cdxfZ9bNYF1ivkY8GyhuLY"
+        },
+        {
+            "titulo": "11. Pelea de tres Saiyajin",
+            "descripcion": "(Dragon Ball Z)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1C_ot9R07D6yvo2AXiAw7uztJaZk8zhk_"
+        },
+        {
+            "titulo": "12. El poder invencible",
+            "descripcion": "Broly (DBZ)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1s9xEKPOGc-1nulMQG0Cuef_bzGSBBw_U"
+        },
+        {
+            "titulo": "13. La galaxia corre peligro",
+            "descripcion": "Bojack (DBZ)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1PYOnYKFLEcU-pXcVFhVwL_1GJF8CoejI"
+        },
+        {
+            "titulo": "14. El regreso del guerrero",
+            "descripcion": "Broly (DBZ)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1c0gsVhK-24jp79MqRrZkZZV33yqBTCHF"
+        },
+        {
+            "titulo": "15. El combate definitivo",
+            "descripcion": "Bio-Broly (DBZ)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1zhU7lVBjEiiViivwCBjRw_rxvS6FuIMI"
+        },
+        {
+            "titulo": "16. El renacer de la fusiÃ³n",
+            "descripcion": "Janemba y Gogeta (DBZ)",
+            "imagen": "https://drive.google.com/uc?export=view&id=10g1s8cP-wgrt3x4P-EQKQQdNj87GBXqM"
+        },
+        {
+            "titulo": "17. El Ataque del DragÃ³n",
+            "descripcion": "Tapion y Hirudegarn (DBZ)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1YzWZBnF5SVHQ76ZtHzGo_d9--o8AvU3S"
+        },
+        {
+            "titulo": "18. La Batalla de los Dioses",
+            "descripcion": "Inicio de Super (Canon)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1BXVTWTH1_wW205QretsCiGiwLq5fTxPH"
+        },
+        {
+            "titulo": "19. ResurrecciÃ³n de 'F'",
+            "descripcion": "Freezer Golden (Canon)",
+            "imagen": "https://drive.google.com/uc?export=view&id=132tuEe-NXEG0zbYYZb307YFL433YTok9"
+        },
+        {
+            "titulo": "20. DBS: Broly (2018)",
+            "descripcion": "Gogeta vs Broly (Canon)",
+            "imagen": "https://drive.google.com/uc?export=view&id=13bM-a9y8l72FiBD0-ZY5qr1HqOQV9Qck"
+        },
+        {
+            "titulo": "21. DBS: Super Hero (2022)",
+            "descripcion": "Gohan Bestia (Canon)",
+            "imagen": "https://drive.google.com/uc?export=view&id=1--0Hiil4UtBmw8ktiXNCla9m1edyCby2"
+        }
+    ],
+    "videojuegos": [
+        {
+            "titulo": "Serie Budokai Tenkaichi (Sparking!)",
+            "descripcion": "Juegos de lucha 3D en arenas abiertas famosos por su enorme cantidad de personajes y espectacularidad (PS2/Wii). ReviviÃ³ recientemente con Sparking! ZERO (2024).",
+            "imagen": "https://drive.google.com/uc?export=view&id=1Q2frh1C-i8lHs2kSVs4nmSuVaqPVBn7m"
+        },
+        {
+            "titulo": "Dragon Ball FighterZ (2018)",
+            "descripcion": "Juego de lucha en 2.5D desarrollado por Arc System Works. Aclamado por su fidelidad visual extrema al anime y sus sÃ³lidas mecÃ¡nicas competitivas.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1emM49Xbed6wuzu6W5FP7DXiC2uGydUwM"
+        },
+        {
+            "titulo": "Dragon Ball Xenoverse 1 y 2",
+            "descripcion": "Juego de acciÃ³n y RPG. El jugador crea su propio personaje (Patrullero del Tiempo) para viajar por las diferentes Ã©pocas de DB corrigiendo alteraciones en la historia.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1opHnByooG3XhwoOGb129gvTHK2zemLQz"
+        },
+        {
+            "titulo": "Dragon Ball Z: Kakarot (2020)",
+            "descripcion": "Action RPG que vuelve a contar la historia de Dragon Ball Z de principio a fin, permitiendo explorar zonas abiertas, pescar, comer y revivir los momentos icÃ³nicos.",
+            "imagen": "https://drive.google.com/uc?export=view&id=15n9jmkwKd64AyrYaG1Q3Mo_LTw5LhI4X"
+        },
+        {
+            "titulo": "MÃ³viles (Dokkan/Legends)",
+            "descripcion": "TÃ­tulos Gacha sumamente rentables. Dokkan Battle usa mecÃ¡nicas de esferas de ki y cartas, mientras Legends ofrece combates 3D en tiempo real con cartas tÃ¡cticas.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1LJjapTQJ28k_6Pt1_vZxFMqBi2wmWx6_"
+        },
+        {
+            "titulo": "Super Dragon Ball Heroes",
+            "descripcion": "Juego de arcade exclusivo de JapÃ³n que usa cartas fÃ­sicas. Famoso por sus transformaciones locas (SSJ3 Bardock, Vegetto Xeno) y tramas (no canon).",
+            "imagen": "https://drive.google.com/uc?export=view&id=15SZUX8XyEOFjHgV9J8mUFKLLRCrNxEaH"
+        },
+        {
+            "titulo": "Serie Budokai ClÃ¡sica",
+            "descripcion": "Saga de PS2 (Budokai 1, 2, 3) que redefiniÃ³ los juegos de DBZ en 3D con un sistema de combate 2.5D y cÃ¡psulas.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1aBMBzvH8LUqDZoxDfdTzednCwXTiahY1"
+        },
+        {
+            "titulo": "Serie Raging Blast",
+            "descripcion": "Raging Blast 1 y 2 para PS3/Xbox 360, considerados sucesores espirituales de Tenkaichi en la generaciÃ³n HD.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1GR5bWqLoO7eGdz-yeKOnyJqmqoDsd7JE"
+        },
+        {
+            "titulo": "Serie Shin Budokai",
+            "descripcion": "TÃ­tulos imprescindibles para PSP, trasladaron la magia del combate rÃ¡pido a formato portÃ¡til.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1VpnGeNTwnoCeF1OIgONFwFXrSiQBCZtY"
+        },
+        {
+            "titulo": "TrilogÃ­a Legacy of Goku",
+            "descripcion": "Legacy of Goku I, II y Buu's Fury. RPGs de acciÃ³n clÃ¡sicos que permitÃ­an explorar la Tierra, Namek y otros lugares.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1UcPPHRupw_7Cg0bcceCMZux00fbWcLyA"
+        },
+        {
+            "titulo": "Advanced Adventure",
+            "descripcion": "Un beat 'em up para GBA brillante y divertido basado en la etapa infantil de Goku, de los mÃ¡s queridos por la comunidad.",
+            "imagen": "https://drive.google.com/uc?export=view&id=1CDaqeXIbeSDIL-cB8Nm72SojEbGHYKGv"
+        }
+    ]
+}
+
