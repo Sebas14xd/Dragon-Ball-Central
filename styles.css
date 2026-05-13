@@ -1,299 +1,185 @@
-/* 
-   ╔══════════════════════════════════════════════════════════╗
-   ║  UNIVERSO DRAGON BALL - WIKI HISPANO                     ║
-   ║  Enciclopedia Completa                                   ║
-   ╚══════════════════════════════════════════════════════════╝
-*/
 
 :root {
     --db-orange: #f57c00;
-    --db-yellow: #ffcc00;
-    --db-dark: #0a0a0a;
-    --db-dark-sec: #141414;
-    --db-blue: #00d2ff;
-    --db-red: #ff1744;
-    --db-green: #00e676;
-    --db-purple: #a855f7;
+    --db-yellow: #ffc107;
+    --db-black: #0b0b0b;
+    --db-gray: #1a1a1a;
+    --db-glass: rgba(255, 255, 255, 0.05);
 }
-
-/* ═══ GLOBAL ═══ */
-* { box-sizing: border-box; }
 
 body {
-    background-color: var(--db-dark);
-    font-family: 'Poppins', sans-serif;
+    background-color: var(--db-black);
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
-    position: relative;
 }
 
-main, footer, .creator-banner, nav {
-    position: relative;
-    z-index: 1;
+/* Glassmorphism Cards */
+.bg-dark-secondary {
+    background: var(--db-glass) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
-/* ═══ LOADER ═══ */
-.loader-container {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--db-dark);
+/* Character Card Design */
+.character-card {
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #111 !important;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(245, 124, 0, 0.3) !important;
+}
+
+.card-img-wrapper {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.character-card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.character-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10000;
-    transition: opacity 0.6s ease, visibility 0.6s ease;
+    gap: 5px;
 }
-.loader-container.hidden { opacity: 0; visibility: hidden; }
 
-.db-spinner {
-    width: 90px; height: 90px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 35% 35%, var(--db-yellow) 40%, var(--db-orange) 60%);
-    animation: spin 1.2s linear infinite;
-    box-shadow: 0 0 40px var(--db-orange), inset 0 0 20px rgba(0,0,0,0.3);
+/* Media Cards (Posters) */
+.media-card {
+    transition: transform 0.3s ease;
+}
+
+.poster-wrapper {
     position: relative;
-}
-.db-spinner::after {
-    content: "★";
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%,-50%);
-    font-size: 30px;
-    color: #c62828;
-}
-
-.loading-text {
-    margin-top: 25px;
-    color: var(--db-yellow);
-    font-weight: 900;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes spin { to { transform: rotate(360deg); } }
-@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
-
-/* ═══ NAVBAR ═══ */
-.navbar {
-    background: rgba(10, 10, 10, 0.95) !important;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(245,124,0,0.2) !important;
-}
-.navbar-brand img { transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-.navbar-brand:hover img { transform: scale(1.12) rotate(-3deg); }
-
-.nav-link {
-    position: relative;
-    margin: 0 4px;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    padding: 8px 10px !important;
-    transition: color 0.3s;
-}
-.nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: 0; left: 50%; width: 0; height: 2px;
-    background: linear-gradient(90deg, var(--db-orange), var(--db-yellow));
-    transition: width 0.3s, left 0.3s;
-}
-.nav-link:hover::after, .nav-link.active::after { width: 100%; left: 0; }
-.nav-link:hover, .nav-link.active { color: var(--db-yellow) !important; }
-
-/* ═══ HERO ═══ */
-.hero-section {
-    min-height: 60vh;
-    background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(245,124,0,0.2)), url('img/titulo2.png') no-repeat center;
-    background-size: 300px;
-    border-bottom: 3px solid var(--db-orange);
-    position: relative;
+    border-radius: 12px;
     overflow: hidden;
-    z-index: 1;
-}
-.hero-content { position: relative; z-index: 2; }
-.text-shadow { text-shadow: 0 0 30px rgba(245,124,0,0.6), 0 4px 0 #000; }
-
-.hero-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    aspect-ratio: 2/3;
+    background: #000;
 }
 
-/* ═══ CARDS ═══ */
-.bg-dark-secondary { background-color: var(--db-dark-sec); }
-
-.character-card-modern,
-.movie-card {
-    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    border: 1px solid rgba(255,255,255,0.08) !important;
-    overflow: hidden;
-    background: rgba(20,20,20,0.95) !important;
-    border-radius: 12px !important;
-}
-
-.character-card-modern:hover,
-.movie-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--db-orange) !important;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.6), 0 0 15px rgba(245,124,0,0.15);
-}
-
-.character-card-modern .card-img-top,
-.movie-card .card-img-top {
+.poster-img {
     width: 100%;
-    object-fit: contain;
-    background-color: #0d0d0d;
-    padding: 8px;
-    transition: transform 0.6s ease, opacity 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: all 0.3s ease;
 }
 
-.character-card-modern:hover .card-img-top,
-.movie-card:hover .card-img-top {
+.media-card:hover .poster-img {
+    opacity: 1;
     transform: scale(1.05);
 }
 
-.char-img {
-    height: 300px !important;
-}
-
-/* ═══ CAROUSEL ═══ */
-.carousel-btn {
+.poster-info {
     position: absolute;
-    top: 50%; transform: translateY(-50%);
-    background: rgba(245,124,0,0.85);
-    border: none; color: white;
-    width: 32px; height: 32px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    z-index: 10;
-    transition: all 0.3s;
-    opacity: 0;
-    cursor: pointer;
-}
-.character-card-modern:hover .carousel-btn { opacity: 1; }
-.carousel-btn:hover { background: var(--db-yellow); color: #000; transform: translateY(-50%) scale(1.15); }
-.prev-btn { left: 8px; }
-.next-btn { right: 8px; }
-
-.image-counter {
-    position: absolute;
-    bottom: 8px; left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.75);
-    padding: 2px 12px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    z-index: 10;
-    backdrop-filter: blur(4px);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 10px 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    color: white;
+    text-align: center;
 }
 
-/* ═══ STATS BARS ═══ */
-.stat-bar-container {
-    height: 4px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 3px;
-    margin-bottom: 6px;
-    overflow: hidden;
-}
-.stat-bar-fill {
-    height: 100%;
-    border-radius: 3px;
-    transition: width 1s ease;
-}
-.stat-bar-fill.fuerza { background: linear-gradient(90deg, #ff1744, #ff6e40); }
-.stat-bar-fill.ki { background: linear-gradient(90deg, var(--db-orange), var(--db-yellow)); }
-.stat-bar-fill.velocidad { background: linear-gradient(90deg, #00b0ff, #00e5ff); }
-.stat-bar-fill.tecnica { background: linear-gradient(90deg, #a855f7, #ec4899); }
-
-/* ═══ TIMELINE ═══ */
-.timeline {
-    position: relative;
-    padding: 20px 0;
-}
-.timeline::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 50%;
-    width: 3px; height: 100%;
-    background: linear-gradient(to bottom, var(--db-orange), var(--db-yellow), var(--db-orange));
-    transform: translateX(-50%);
-}
-.timeline-item {
-    display: flex;
-    justify-content: flex-end;
-    padding: 15px 30px 15px 0;
-    width: 50%;
-    position: relative;
-}
-.timeline-item:nth-child(even) {
-    justify-content: flex-start;
-    margin-left: 50%;
-    padding: 15px 0 15px 30px;
-}
-.timeline-item::after {
-    content: "";
-    position: absolute;
-    top: 22px;
-    width: 14px; height: 14px;
-    background: var(--db-orange);
-    border: 3px solid var(--db-yellow);
-    border-radius: 50%;
-    z-index: 1;
-}
-.timeline-item::after { right: -7px; }
-.timeline-item:nth-child(even)::after { left: -7px; right: auto; }
-
-.timeline-content {
-    background: rgba(20,20,20,0.9);
-    border: 1px solid rgba(245,124,0,0.2);
-    border-radius: 12px;
-    padding: 15px 20px;
-    max-width: 350px;
-    backdrop-filter: blur(5px);
-}
-.timeline-content h4 { color: var(--db-yellow); font-size: 1rem; margin-bottom: 5px; }
-.timeline-content p { font-size: 0.8rem; margin: 0; color: #aaa; }
-
-/* ═══ FOOTER ═══ */
-.footer {
-    background: linear-gradient(var(--db-dark), #000);
+/* Stats Styling */
+.stat-row {
+    margin-bottom: 8px;
 }
 
-/* ═══ SCROLL TO TOP ═══ */
-.scroll-to-top {
+.stat-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: #888;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.tiny-badge {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+}
+
+/* Navigation Custom */
+.navbar {
+    background: rgba(0,0,0,0.9) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--db-orange);
+}
+
+.nav-link {
+    transition: color 0.3s;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--db-orange) !important;
+}
+
+/* Loader */
+#loader {
     position: fixed;
-    bottom: 30px; right: 30px;
-    width: 50px; height: 50px;
-    background: linear-gradient(135deg, var(--db-orange), var(--db-yellow));
-    color: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--db-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s;
+}
+
+/* Animation Utilities */
+[data-aos] {
+    pointer-events: none;
+}
+
+.aos-animate {
+    pointer-events: auto;
+}
+
+/* Timeline Custom (if still used) */
+.timeline-item {
+    border-left: 3px solid var(--db-orange);
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* Dragon Ball Cards */
+.dragonball-card {
+    transition: all 0.3s ease;
+}
+
+.dragonball-card:hover {
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.ball-icon {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    display: none;
-    align-items: center; justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
-    transition: all 0.3s;
-    border: none;
-    box-shadow: 0 5px 20px rgba(245,124,0,0.4);
-    font-weight: bold;
-}
-.scroll-to-top:hover { transform: translateY(-5px) scale(1.1); }
-
-/* ═══ SECTION CONTENT FIX ═══ */
-.section-content {
-    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
 }
 
-/* ═══ RESPONSIVE ═══ */
-@media (max-width: 992px) {
-    .timeline::before { left: 20px; }
-    .timeline-item { width: 100%; padding-left: 50px; padding-right: 0; justify-content: flex-start; }
-    .timeline-item:nth-child(even) { margin-left: 0; padding-left: 50px; }
-    .timeline-item::after { left: 14px !important; right: auto !important; }
-}
-@media (max-width: 768px) {
-    .hero-section { min-height: 50vh; }
-    .hero-section h1 { font-size: 2.5rem; }
-    .char-img { height: 260px !important; }
+.x-small {
+    font-size: 0.7rem;
 }
