@@ -1,185 +1,308 @@
 
+/* 
+    DRAGON BALL CENTRAL - PREMIUM DESIGN SYSTEM
+    Modern, Minimalist, Dashboard-inspired Aesthetic
+*/
+
 :root {
-    --db-orange: #f57c00;
-    --db-yellow: #ffc107;
-    --db-black: #0b0b0b;
-    --db-gray: #1a1a1a;
-    --db-glass: rgba(255, 255, 255, 0.05);
+    /* Color Palette */
+    --bg-main: #0a0a0c;
+    --bg-card: #151518;
+    --bg-nav: rgba(10, 10, 12, 0.85);
+    --accent-primary: #ff5e00;
+    --accent-secondary: #00d2ff;
+    --text-main: #ffffff;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    
+    /* Spacing & Borders */
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --radius-sm: 8px;
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: var(--db-black);
-    color: #e0e0e0;
+    background-color: var(--bg-main);
+    background-image: 
+        radial-gradient(circle at 0% 0%, rgba(255, 94, 0, 0.05), transparent 40%),
+        radial-gradient(circle at 100% 100%, rgba(0, 210, 255, 0.05), transparent 40%);
+    background-attachment: fixed;
+    color: var(--text-main);
     font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
 }
 
-/* Glassmorphism Cards */
-.bg-dark-secondary {
-    background: var(--db-glass) !important;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
-/* Character Card Design */
-.character-card {
+/* --- Layout Components --- */
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 280px;
+    background: var(--bg-card);
+    border-right: 1px solid var(--border-color);
+    position: fixed;
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    z-index: 1000;
+    transition: var(--transition-smooth);
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-main);
+    text-decoration: none;
+}
+
+.brand span {
+    background: linear-gradient(135deg, var(--accent-primary), #ff9100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-group {
+    margin-bottom: 2rem;
+}
+
+.nav-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    padding-left: 12px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: var(--text-muted);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    margin-bottom: 4px;
+    transition: var(--transition-smooth);
+    font-weight: 500;
+    border: 1px solid transparent;
+}
+
+.nav-item:hover {
+    color: var(--text-main);
+    background: var(--glass-bg);
+}
+
+.nav-item.active {
+    background: rgba(255, 94, 0, 0.1);
+    color: var(--accent-primary);
+    border-color: rgba(255, 94, 0, 0.2);
+}
+
+/* Main Content Area */
+.main-wrapper {
+    margin-left: 280px;
+    flex: 1;
+    padding: 2rem 3rem;
+    width: calc(100% - 280px);
+}
+
+/* --- UI Elements --- */
+
+.section-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-title-wrapper h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-title-wrapper p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Premium Cards */
+.premium-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    background: #111 !important;
+    transition: var(--transition-smooth);
+    height: 100%;
 }
 
-.character-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(245, 124, 0, 0.3) !important;
+.premium-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 94, 0, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
-.card-img-wrapper {
+.card-image-box {
     position: relative;
-    height: 350px;
+    aspect-ratio: 16/9;
     overflow: hidden;
 }
 
-.card-img-wrapper img {
+.card-image-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
-.character-card:hover .card-img-wrapper img {
+.premium-card:hover .card-image-box img {
     transform: scale(1.1);
 }
 
-.character-overlay {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.card-content {
+    padding: 1.5rem;
 }
 
-/* Media Cards (Posters) */
-.media-card {
-    transition: transform 0.3s ease;
-}
-
-.poster-wrapper {
-    position: relative;
-    border-radius: 12px;
+/* Tables Customization */
+.custom-table-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    aspect-ratio: 2/3;
-    background: #000;
 }
 
-.poster-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.85;
-    transition: all 0.3s ease;
+.table {
+    margin-bottom: 0;
+    color: var(--text-main);
 }
 
-.media-card:hover .poster-img {
-    opacity: 1;
-    transform: scale(1.05);
+.table thead th {
+    background: rgba(255, 255, 255, 0.02);
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    padding: 1.2rem 1.5rem;
 }
 
-.poster-info {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 20px 10px 10px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
-    color: white;
-    text-align: center;
+.table tbody td {
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
 }
 
-/* Stats Styling */
-.stat-row {
-    margin-bottom: 8px;
+/* Badges */
+.badge-premium {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
-.stat-label {
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: #888;
-    display: block;
-    margin-bottom: 2px;
-}
+/* --- Loader & Transitions --- */
 
-.tiny-badge {
-    font-size: 0.6rem;
-    padding: 3px 8px;
-}
-
-/* Navigation Custom */
-.navbar {
-    background: rgba(0,0,0,0.9) !important;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--db-orange);
-}
-
-.nav-link {
-    transition: color 0.3s;
-    letter-spacing: 1px;
-}
-
-.nav-link:hover, .nav-link.active {
-    color: var(--db-orange) !important;
-}
-
-/* Loader */
 #loader {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--db-black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    inset: 0;
+    background: var(--bg-main);
     z-index: 9999;
-    transition: opacity 0.5s;
-}
-
-/* Animation Utilities */
-[data-aos] {
-    pointer-events: none;
-}
-
-.aos-animate {
-    pointer-events: auto;
-}
-
-/* Timeline Custom (if still used) */
-.timeline-item {
-    border-left: 3px solid var(--db-orange);
-    padding-left: 20px;
-    margin-bottom: 30px;
-}
-
-/* Dragon Ball Cards */
-.dragonball-card {
-    transition: all 0.3s ease;
-}
-
-.dragonball-card:hover {
-    background: rgba(255, 255, 255, 0.08) !important;
-}
-
-.ball-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    align-items: center;
 }
 
-.x-small {
-    font-size: 0.7rem;
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--glass-bg);
+    border-top-color: var(--accent-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.section-content {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 80px;
+        padding: 2rem 0.5rem;
+        align-items: center;
+    }
+    .brand span, .nav-label, .nav-item span {
+        display: none;
+    }
+    .main-wrapper {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+        padding: 2rem 1.5rem;
+    }
+    .nav-item {
+        justify-content: center;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        bottom: 0;
+        height: 70px;
+        width: 100%;
+        flex-direction: row;
+        border-right: none;
+        border-top: 1px solid var(--border-color);
+        padding: 0;
+        justify-content: space-around;
+        top: auto;
+    }
+    .main-wrapper {
+        margin-left: 0;
+        margin-bottom: 70px;
+        width: 100%;
+        padding: 1.5rem;
+    }
+    .nav-group {
+        display: flex;
+        margin: 0;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .brand { display: none; }
 }

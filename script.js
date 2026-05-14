@@ -1,78 +1,99 @@
 
-// Funciones de utilidad
-function showLoader() {
-    document.getElementById('loader').classList.remove('d-none');
+// DRAGON BALL CENTRAL - MODERN DASHBOARD ENGINE
+
+document.addEventListener('DOMContentLoaded', () => {
+    initDashboard();
+});
+
+async function initDashboard() {
+    // Inicializar navegación y carga de datos
+    setupNavigation();
+    await loadInitialData();
+    
+    // Ocultar loader inicial
+    setTimeout(() => {
+        document.getElementById('loader').style.display = 'none';
+    }, 800);
 }
 
-function hideLoader() {
-    document.getElementById('loader').classList.add('d-none');
+async function loadInitialData() {
+    try {
+        const characters = await window.api.getCharacters();
+        const media = await window.api.getMedia();
+        const world = await window.api.getWorld();
+
+        renderAll(characters, media, world);
+    } catch (error) {
+        showError("No se pudieron cargar los datos del multiverso.");
+    }
 }
 
-function scrollToTop() {
+function setupNavigation() {
+    // El primer render ya está en 'inicio' por defecto
+    showSection('inicio');
+}
+
+function showSection(sectionId) {
+    // Ocultar todas las secciones con transición suave
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+        section.classList.add('d-none');
+    });
+
+    // Mostrar sección activa
+    const activeSection = document.getElementById(sectionId);
+    if (activeSection) {
+        activeSection.classList.remove('d-none');
+        // Trigger AOS para re-animar si es necesario
+        if (window.AOS) AOS.refresh();
+    }
+
+    // Actualizar Sidebar
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('onclick')?.includes(`'${sectionId}'`)) {
+            item.classList.add('active');
+        }
+    });
+
+    // Scroll to top
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Navegación SPA
-async function showSection(id) {
-    showLoader();
-    // Pequeño delay para suavidad
-    await new Promise(r => setTimeout(r, 400));
-
-    document.querySelectorAll('.section-content').forEach(s => s.classList.add('d-none'));
-    
-    const active = document.getElementById(id);
-    if (active) {
-        active.classList.remove('d-none');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        
-        // Animaciones AOS re-init
-        AOS.refresh();
-    }
-
-    // Cerrar menú móvil si está abierto
-    const navbar = document.getElementById('navbarNav');
-    if (navbar.classList.contains('show')) {
-        bootstrap.Collapse.getInstance(navbar).hide();
-    }
-
-    hideLoader();
+function renderAll(characters, media, world) {
+    renderCharacters(characters);
+    renderMedia(media);
+    renderWorld(world);
 }
 
-// Renderizado de Personajes (Diseño mejorado)
 function renderCharacters(characters) {
-    const container = document.querySelector('#charactersContainer');
+    const container = document.getElementById('charactersContainer');
     if (!container) return;
 
-    container.innerHTML = characters.map(c => `
-        <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-            <div class="card h-100 character-card border-0 shadow-lg">
-                <div class="card-img-wrapper">
-                    <img src="${c.imagenes[0]}" class="card-img-top" alt="${c.Personaje}" 
-                         onerror="this.src='https://via.placeholder.com/400x500/111/f57c00?text=${c.Personaje}'">
-                    <div class="character-overlay">
-                        <span class="badge bg-warning text-dark">${c.Raza}</span>
-                        <span class="badge bg-outline-warning">Universo ${c.Universo}</span>
+    container.innerHTML = characters.map(char => `
+        <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="premium-card">
+                <div class="card-image-box">
+                    <img src="${char.imagenes[0]}" alt="${char.Personaje}">
+                    <div class="position-absolute top-0 start-0 m-3">
+                        <span class="badge bg-primary rounded-pill shadow-sm">U${char.Universo}</span>
                     </div>
                 </div>
-                <div class="card-body bg-dark text-light border-top border-warning border-4">
-                    <h3 class="h4 fw-bold text-warning mb-2">${c.Personaje}</h3>
-                    <p class="small text-secondary mb-3">${c.descripcion}</p>
-                    
-                    <div class="stats-box mb-3">
-                        ${Object.entries(c.stats).map(([stat, val]) => `
-                            <div class="stat-row">
-                                <span class="stat-label">${stat.toUpperCase()}</span>
-                                <div class="progress bg-secondary" style="height: 6px;">
-                                    <div class="progress-bar bg-warning" style="width: ${val}%"></div>
-                                </div>
-                            </div>
-                        `).join('')}
+                <div class="card-content">
+                    <div class="d-flex justify-content-between align-items-start mb-2">
+                        <h5 class="mb-0 text-white">${char.Personaje}</h5>
+                        <span class="text-muted small">${char.Raza}</span>
                     </div>
-
-                    <div class="mt-auto">
-                        <h6 class="text-warning small fw-bold">TÉCNICAS:</h6>
-                        <div class="d-flex flex-wrap gap-1">
-                            ${c.tecnicas.slice(0, 3).map(t => `<span class="badge bg-dark-secondary border border-warning tiny-badge">${t}</span>`).join('')}
+                    <p class="text-muted small mb-4 line-clamp-2">${char.descripcion}</p>
+                    
+                    <div class="stats-group">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span class="text-muted extra-small">KI LEVEL</span>
+                            <span class="text-primary extra-small fw-bold">${char.stats.ki}%</span>
+                        </div>
+                        <div class="progress mb-3" style="height: 4px; background: rgba(255,255,255,0.05)">
+                            <div class="progress-bar bg-primary" style="width: ${char.stats.ki}%"></div>
                         </div>
                     </div>
                 </div>
@@ -81,126 +102,134 @@ function renderCharacters(characters) {
     `).join('');
 }
 
-// Renderizado de Series/Películas (Diseño tipo Póster)
-function renderMedia(data, containerId) {
-    const container = document.querySelector(`#${containerId}`);
-    if (!container) return;
+function renderMedia(media) {
+    const categories = {
+        'seriesContainer': { data: media.series, label: 'Series' },
+        'mangasContainer': { data: media.mangas, label: 'Manga' },
+        'peliculasContainer': { data: media.peliculas, label: 'Film' },
+        'videojuegosContainer': { data: media.videojuegos, label: 'Game' }
+    };
 
-    container.innerHTML = data.map(item => `
-        <div class="col-6 col-md-4 col-lg-3" data-aos="fade-up">
-            <div class="media-card card h-100 bg-transparent border-0 shadow">
-                <div class="poster-wrapper">
-                    <img src="${item.imagen}" class="card-img poster-img" alt="${item.titulo}"
-                         onerror="this.src='https://via.placeholder.com/300x450/111/f57c00?text=${item.titulo}'">
-                    <div class="poster-info">
-                        <h5 class="fw-bold mb-1">${item.titulo}</h5>
-                        <p class="x-small mb-0">${item.info || ''}</p>
+    Object.entries(categories).forEach(([id, { data, label }]) => {
+        const container = document.getElementById(id);
+        if (container) {
+            container.innerHTML = data.map(item => `
+                <div class="col-xl-2 col-lg-3 col-md-4 col-6" data-aos="zoom-in">
+                    <div class="premium-card">
+                        <div class="card-image-box" style="aspect-ratio: 2/3;">
+                            <img src="${item.imagen}" alt="${item.titulo}">
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3" style="background: linear-gradient(transparent, rgba(0,0,0,0.8));">
+                                <span class="text-primary fw-bold extra-small">${label}</span>
+                                <h6 class="text-white small mb-0 text-truncate">${item.titulo}</h6>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    `).join('');
+            `).join('');
+        }
+    });
 }
 
-// Renderizado de Sagas
-function renderSagas(sagas) {
-    const container = document.querySelector('#sagasContainer');
-    if (!container) return;
-
-    container.innerHTML = sagas.map(era => `
-        <div class="col-md-4" data-aos="fade-right">
-            <div class="card bg-dark-secondary border-warning h-100 p-4 saga-card">
-                <h4 class="text-warning fw-bold border-bottom border-warning pb-2 mb-3">${era.era}</h4>
-                <ul class="list-unstyled text-light">
-                    ${era.lista.map(saga => `
-                        <li class="mb-2"><i class="bi bi-chevron-right text-warning me-2"></i>${saga}</li>
-                    `).join('')}
-                </ul>
-            </div>
-        </div>
-    `).join('');
-}
-
-// Renderizado de Esferas
-function renderEsferas(esferas) {
-    const container = document.querySelector('#esferasContainer');
-    if (!container) return;
-
-    container.innerHTML = esferas.map(e => `
-        <div class="col-md-6" data-aos="flip-up">
-            <div class="card bg-dark-secondary border-${e.color} p-4 h-100 dragonball-card shadow">
-                <div class="d-flex align-items-center mb-3">
-                    <div class="ball-icon me-3 bg-${e.color}">⭐</div>
-                    <h4 class="text-${e.color} fw-bold mb-0">${e.nombre}</h4>
+function renderWorld(world) {
+    // Sagas
+    const sagasContainer = document.getElementById('sagasContainer');
+    if (sagasContainer) {
+        sagasContainer.innerHTML = world.sagas.map(saga => `
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="premium-card p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary bg-opacity-10 p-2 me-3">
+                            <i class="bi bi-journal-text text-primary"></i>
+                        </div>
+                        <h5 class="mb-0 text-white">${saga.era}</h5>
+                    </div>
+                    <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+                        ${saga.lista.map(item => `
+                            <li class="text-muted small d-flex align-items-center">
+                                <i class="bi bi-check2-circle text-primary me-2"></i> ${item}
+                            </li>
+                        `).join('')}
+                    </ul>
                 </div>
-                <p class="text-light small mb-2"><strong>Dragón:</strong> ${e.dragon}</p>
-                <p class="text-secondary small mb-0">${e.descripcion}</p>
             </div>
-        </div>
-    `).join('');
-}
-
-// Renderizado de Universos
-function renderUniversos(universos) {
-    const container = document.querySelector('#universosContainer');
-    if (!container) return;
-
-    container.innerHTML = `
-        <table class="table table-dark table-hover table-bordered border-secondary mt-3">
-            <thead class="table-warning text-dark">
-                <tr>
-                    <th>ID</th>
-                    <th>Dios de la Destrucción</th>
-                    <th>Ángel</th>
-                    <th>Info</th>
-                </tr>
-            </thead>
-            <tbody>
-                ${universos.map(u => `
-                    <tr class="${u.highlight ? 'table-active border-warning' : ''}">
-                        <td>${u.id}</td>
-                        <td class="${u.highlight ? 'text-warning fw-bold' : ''}">${u.dios}</td>
-                        <td class="${u.highlight ? 'text-warning fw-bold' : ''}">${u.angel}</td>
-                        <td class="small">${u.info}</td>
-                    </tr>
-                `).join('')}
-            </tbody>
-        </table>
-    `;
-}
-
-// Evento Inicial
-document.addEventListener('DOMContentLoaded', async () => {
-    try {
-        const api = window.api;
-        if (!api) throw new Error("API no cargada");
-
-        // Cargar todo en paralelo para máxima velocidad
-        const [characters, media, world] = await Promise.all([
-            api.getCharacters(),
-            api.getMedia(),
-            api.getWorld()
-        ]);
-
-        if (characters) renderCharacters(characters);
-        
-        if (media) {
-            if (media.series) renderMedia(media.series, 'seriesContainer');
-            if (media.mangas) renderMedia(media.mangas, 'mangasContainer');
-            if (media.peliculas) renderMedia(media.peliculas, 'peliculasContainer');
-            if (media.videojuegos) renderMedia(media.videojuegos, 'videojuegosContainer');
-        }
-
-        if (world) {
-            if (world.sagas) renderSagas(world.sagas);
-            if (world.esferas) renderEsferas(world.esferas);
-            if (world.universos) renderUniversos(world.universos);
-        }
-
-    } catch (error) {
-        console.error("Error inicializando la página:", error);
-    } finally {
-        // Aseguramos que el loader desaparezca pase lo que pase
-        setTimeout(hideLoader, 800);
+        `).join('');
     }
-});
+
+    // Esferas
+    const esferasContainer = document.getElementById('esferasContainer');
+    if (esferasContainer) {
+        esferasContainer.innerHTML = world.esferas.map(esfera => `
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="premium-card p-4 text-center">
+                    <div class="mb-3 display-6">✨</div>
+                    <h5 class="text-white mb-2">${esfera.nombre}</h5>
+                    <p class="text-muted small mb-3">${esfera.descripcion}</p>
+                    <span class="badge bg-${esfera.color} bg-opacity-10 text-${esfera.color} border border-${esfera.color} border-opacity-25">${esfera.dragon}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+
+    // Universos (Table)
+    const universosContainer = document.getElementById('universosContainer');
+    if (universosContainer) {
+        universosContainer.innerHTML = `
+            <table class="table align-middle">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>DIOS DE LA DESTRUCCIÓN</th>
+                        <th>ÁNGEL</th>
+                        <th>INFORMACIÓN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${world.universos.map(u => `
+                        <tr class="${u.highlight ? 'bg-primary bg-opacity-5' : ''}">
+                            <td class="fw-bold text-primary">U${u.id}</td>
+                            <td class="text-white">${u.dios}</td>
+                            <td class="text-white">${u.angel}</td>
+                            <td class="text-muted small">${u.info}</td>
+                        </tr>
+                    `).join('')}
+                </tbody>
+            </table>
+        `;
+    }
+
+    // Biomas
+    const biomasContainer = document.getElementById('biomasContainer');
+    if (biomasContainer && world.biomas) {
+        biomasContainer.innerHTML = world.biomas.map(bioma => `
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="premium-card p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="text-white mb-0">${bioma.nombre}</h5>
+                        <i class="bi bi-geo-alt text-primary"></i>
+                    </div>
+                    <p class="text-muted small mb-0">${bioma.descripcion}</p>
+                    <hr class="border-secondary opacity-10">
+                    <span class="text-primary extra-small fw-bold">CLIMA: ${bioma.clima.toUpperCase()}</span>
+                </div>
+            </div>
+        `).join('');
+    }
+}
+
+function showError(msg) {
+    console.error(msg);
+    // Podría implementarse un toast o mensaje en UI
+}
+
+// Estilos extra inyectados para utilidades rápidas
+const style = document.createElement('style');
+style.textContent = `
+    .extra-small { font-size: 0.65rem; letter-spacing: 0.1em; }
+    .line-clamp-2 {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+`;
+document.head.appendChild(style);

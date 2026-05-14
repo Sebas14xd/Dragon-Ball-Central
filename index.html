@@ -4,148 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dragon Ball Central - Base de Datos Multiversal</title>
+    <title>Dragon Ball Central | Dashboard Multiversal</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;900&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- AOS Animations -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css?v=1.2">
+    <link rel="stylesheet" href="styles.css?v=2.0">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1-9iYR9tDzA3vZQyK4j8gkoI1GG-O8hEl">
+    <link rel="icon" type="image/png" href="https://drive.google.com/uc?export=view&id=1vD2b4t7FukvKqu6QyCsFmTldoAQTXO0L">
 </head>
 
 <body>
-    <!-- Loader -->
+    <!-- Premium Loader -->
     <div id="loader">
-        <div class="spinner-border text-warning" style="width: 3rem; height: 3rem;" role="status">
-            <span class="visually-hidden">Cargando...</span>
-        </div>
+        <div class="loader-circle"></div>
     </div>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#" onclick="showSection('inicio')">
-                <img src="https://drive.google.com/uc?export=view&id=1Rq6vNw7AHXc_CezyvKidTta7pLngUQQP" alt="DB Central" height="40" class="me-2">
-                <span class="fw-bold text-warning d-none d-sm-inline">DB CENTRAL</span>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <a href="#" class="brand" onclick="showSection('inicio')">
+                <i class="bi bi-pentagon-fill text-primary"></i>
+                <span>DB CENTRAL</span>
             </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto text-uppercase small fw-bold">
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('personajes')">Personajes</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('sagas')">Sagas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('esferas')">Esferas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('universos')">Universos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('serie')">Series</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('manga')">Manga</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('peliculas')">Películas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('videojuegos')">Juegos</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
 
-    <main class="container py-5">
-        <!-- Inicio Section -->
-        <section id="inicio" class="section-content">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-12 text-center" data-aos="fade-up">
-                    <h1 class="display-3 fw-bold text-warning mb-4">El Universo de Akira Toriyama</h1>
-                    <p class="lead text-light mb-5">Dragon Ball es un fenómeno cultural que ha cautivado a generaciones. Esta es la base de datos centralizada con toda la información sobre el multiverso, desde sus personajes hasta sus sagas más épicas.</p>
-                    <div class="d-flex gap-3 justify-content-center mt-4">
-                        <button class="btn btn-warning px-5 py-3 fw-bold" onclick="showSection('personajes')">Explorar Personajes</button>
-                        <button class="btn btn-outline-warning px-5 py-3" onclick="showSection('serie')">Ver Series</button>
+            <div class="nav-group">
+                <p class="nav-label">General</p>
+                <a href="#" class="nav-item active" onclick="showSection('inicio')">
+                    <i class="bi bi-house-door"></i> <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('personajes')">
+                    <i class="bi bi-person-badge"></i> <span>Personajes</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-label">Multimedia</p>
+                <a href="#" class="nav-item" onclick="showSection('serie')">
+                    <i class="bi bi-tv"></i> <span>Series TV</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('peliculas')">
+                    <i class="bi bi-film"></i> <span>Películas</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('manga')">
+                    <i class="bi bi-book"></i> <span>Manga</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('videojuegos')">
+                    <i class="bi bi-controller"></i> <span>Videojuegos</span>
+                </a>
+            </div>
+
+            <div class="nav-group">
+                <p class="nav-label">Exploración</p>
+                <a href="#" class="nav-item" onclick="showSection('sagas')">
+                    <i class="bi bi-clock-history"></i> <span>Sagas</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('esferas')">
+                    <i class="bi bi-stars"></i> <span>Esferas</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('universos')">
+                    <i class="bi bi-globe-central-south-asia"></i> <span>Multiverso</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('biomas')">
+                    <i class="bi bi-map"></i> <span>Biomas</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-wrapper">
+            <!-- Dashboard / Inicio Section -->
+            <section id="inicio" class="section-content">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Panel de Control</h2>
+                        <p>Bienvenido de nuevo, Guerrero Z. Aquí tienes las últimas actualizaciones.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Personajes Section -->
-        <section id="personajes" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Base de Datos de Personajes</h2>
-            <div class="row g-4" id="charactersContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
+                <div class="row g-4 mb-5">
+                    <div class="col-md-8">
+                        <div class="premium-card p-0 overflow-hidden" style="min-height: 400px; background: url('https://lh3.googleusercontent.com/d/1-9iYR9tDzA3vZQyK4j8gkoI1GG-O8hEl') center/cover;">
+                            <div class="h-100 w-100 p-5 d-flex flex-column justify-content-end" style="background: linear-gradient(transparent, rgba(0,0,0,0.9));">
+                                <span class="badge bg-primary mb-2" style="width: fit-content;">Novedad</span>
+                                <h3 class="display-5 fw-black text-white">Goku Ultra Instinto</h3>
+                                <p class="text-white-50">Descubre las nuevas estadísticas del guerrero más fuerte del Universo 7.</p>
+                                <button class="btn btn-primary mt-3" style="width: fit-content;" onclick="showSection('personajes')">Ver Perfil Completo</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="premium-card p-4">
+                            <h4 class="mb-4">Resumen Semanal</h4>
+                            <div class="d-flex flex-column gap-3">
+                                <div class="p-3 bg-dark rounded border-start border-primary border-4">
+                                    <p class="small text-muted mb-0">Nueva Saga</p>
+                                    <h6 class="mb-0">Arco de Moro disponible</h6>
+                                </div>
+                                <div class="p-3 bg-dark rounded border-start border-info border-4">
+                                    <p class="small text-muted mb-0">Multimedia</p>
+                                    <h6 class="mb-0">Trailer de DB Daima</h6>
+                                </div>
+                                <div class="p-3 bg-dark rounded border-start border-warning border-4">
+                                    <p class="small text-muted mb-0">Evento</p>
+                                    <h6 class="mb-0">40 Aniversario Dragon Ball</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-        <!-- Sagas Section -->
-        <section id="sagas" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Cronología de Sagas</h2>
-            <div class="row g-4" id="sagasContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
+            <!-- Personajes Section -->
+            <section id="personajes" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Personajes</h2>
+                        <p>Directorio detallado de guerreros y seres de todos los universos.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="charactersContainer"></div>
+            </section>
 
-        <!-- Esferas Section -->
-        <section id="esferas" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Artefactos: Esferas del Dragón</h2>
-            <div class="row g-4" id="esferasContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
+            <!-- Sagas Section -->
+            <section id="sagas" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Sagas e Historias</h2>
+                        <p>Cronología completa de los eventos más importantes del multiverso.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="sagasContainer"></div>
+            </section>
 
-        <!-- Universos Section -->
-        <section id="universos" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">El Multiverso (Los 12 Universos)</h2>
-            <div id="universosContainer" class="table-responsive">
-                <!-- Dinámico -->
-            </div>
-        </section>
+            <!-- Esferas Section -->
+            <section id="esferas" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Esferas del Dragón</h2>
+                        <p>Artefactos místicos capaces de conceder cualquier deseo.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="esferasContainer"></div>
+            </section>
 
-        <!-- Series Section -->
-        <section id="serie" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Series Animadas Oficiales</h2>
-            <div class="row g-4" id="seriesContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
+            <!-- Universos Section -->
+            <section id="universos" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>El Multiverso</h2>
+                        <p>Explora la jerarquía divina y los 12 universos.</p>
+                    </div>
+                </div>
+                <div class="custom-table-container">
+                    <div id="universosContainer" class="table-responsive"></div>
+                </div>
+            </section>
 
-        <!-- Manga Section -->
-        <section id="manga" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Publicaciones de Manga</h2>
-            <div class="row g-4" id="mangasContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
+            <!-- Series Section -->
+            <section id="serie" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Series de Televisión</h2>
+                        <p>Toda la cronología animada desde Dragon Ball hasta Daima.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="seriesContainer"></div>
+            </section>
 
-        <!-- Peliculas Section -->
-        <section id="peliculas" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Películas de Animación</h2>
-            <div class="row g-4" id="peliculasContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
+            <!-- Manga Section -->
+            <section id="manga" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Publicaciones Manga</h2>
+                        <p>La fuente original de Akira Toriyama y Toyotaro.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="mangasContainer"></div>
+            </section>
 
-        <!-- Videojuegos Section -->
-        <section id="videojuegos" class="section-content d-none">
-            <h2 class="display-5 fw-bold text-warning border-start border-4 border-warning ps-3 mb-4">Franquicias de Videojuegos</h2>
-            <div class="row g-4" id="videojuegosContainer">
-                <!-- Dinámico -->
-            </div>
-        </section>
-    </main>
+            <!-- Peliculas Section -->
+            <section id="peliculas" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Largometrajes</h2>
+                        <p>Películas, especiales de TV y OVAs oficiales.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="peliculasContainer"></div>
+            </section>
 
-    <footer class="footer bg-black py-5 border-top border-warning mt-5">
-        <div class="container text-center">
-            <img src="https://drive.google.com/uc?export=view&id=1Rq6vNw7AHXc_CezyvKidTta7pLngUQQP" alt="Dragon Ball" height="60" class="mb-4">
-            <p class="text-secondary">&copy; 2024 Dragon Ball Central. Base de datos profesional de Dragon Ball.</p>
-        </div>
-    </footer>
+            <!-- Videojuegos Section -->
+            <section id="videojuegos" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Videojuegos</h2>
+                        <p>De la era de los 8-bits hasta la nueva generación.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="videojuegosContainer"></div>
+            </section>
 
-    <button class="scroll-to-top shadow-lg" onclick="scrollToTop()">↑</button>
+            <!-- Biomas Section -->
+            <section id="biomas" class="section-content d-none">
+                <div class="section-header">
+                    <div class="section-title-wrapper">
+                        <h2>Biomas</h2>
+                        <p>Localizaciones icónicas y entornos del multiverso.</p>
+                    </div>
+                </div>
+                <div class="row g-4" id="biomasContainer"></div>
+            </section>
+        </main>
+    </div>
 
-    <!-- Bootstrap 5 JS -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init({ duration: 800, once: true });</script>
-    <!-- Main Scripts -->
-    <script src="api.js?v=1.2"></script>
-    <script src="script.js?v=1.2"></script>
+    <script src="api.js?v=2.0"></script>
+    <script src="script.js?v=2.0"></script>
 </body>
 
 </html>

@@ -125,10 +125,27 @@ var MEDIA_DATA = {
         { "titulo": "Manga 8", "descripcion": "Edición Especial", "imagen": "https://lh3.googleusercontent.com/d/15AwAhSl2_pgFB7qJ5iLfQd6cJQ6fwzaF" }
     ],
     "peliculas": [
-        { "titulo": "La Batalla de los Dioses", "descripcion": "Goku vs Beerus.", "imagen": "https://lh3.googleusercontent.com/d/1BXVTWTH1_wW205QretsCiGiwLq5fTxPH" },
-        { "titulo": "Resurrección de F", "descripcion": "El regreso de Freezer.", "imagen": "https://lh3.googleusercontent.com/d/169-E9S9Z9eA9Z9E9Z9E9Z9E9Z9E9Z9E9" },
-        { "titulo": "DBS: Broly", "descripcion": "El canon definitivo de Broly.", "imagen": "https://lh3.googleusercontent.com/d/13bM-a9y8l72FiBD0-ZY5qr1HqOQV9Qck" },
-        { "titulo": "DBS: Super Hero", "descripcion": "Gohan y Piccolo vs La Patrulla Roja.", "imagen": "https://lh3.googleusercontent.com/d/1--0Hiil4UtBmw8ktiXNCla9m1edyCby2" }
+        { "titulo": "La leyenda de Shenlong / El camino hacia el más fuerte (Latam)", "descripcion": "Dragon Ball", "info": "Diciembre 1986", "imagen": "https://lh3.googleusercontent.com/d/1MeskJh-7K8Q8UfAK1pT-1f3cBehBdwLa" },
+        { "titulo": "La bella durmiente en el castillo del mal / La princesa durmiente en el castillo del diablo", "descripcion": "Dragon Ball", "info": "Julio 1987", "imagen": "https://lh3.googleusercontent.com/d/1Yhtd75UnoUgdHxeJJS8IeDnAS20X5u7O" },
+        { "titulo": "Aventura mística / Gran aventura mística", "descripcion": "Dragon Ball", "info": "Julio 1988", "imagen": "https://lh3.googleusercontent.com/d/1vdukB3FoFKOewaWd4za-1Qe793mmRCuO" },
+        { "titulo": "Garlic Junior Inmortal / ¡Devuélvanme a mi Gohan!", "descripcion": "Dragon Ball Z", "info": "Julio 1989", "imagen": "https://lh3.googleusercontent.com/d/1kv0-M5kuwkQKEV8zMuH0Fmc4q-Ku0ujK" },
+        { "titulo": "El más fuerte del mundo", "descripcion": "Dragon Ball Z", "info": "Marzo 1990", "imagen": "https://lh3.googleusercontent.com/d/1msJ6i3_F-OaBOWQVRG4fvKtFjkF6jfZg" },
+        { "titulo": "La superbatalla decisiva por la Tierra / La batalla más grande de este mundo por la Tierra", "descripcion": "Dragon Ball Z", "info": "Julio 1990", "imagen": "https://lh3.googleusercontent.com/d/1aUuKp0ekK4q9qykIA-ov3QuovAyd-TXh" },
+        { "titulo": "El superguerrero Son Goku / Goku es un Super Saiyajin", "descripcion": "Dragon Ball Z", "info": "Marzo 1991", "imagen": "https://lh3.googleusercontent.com/d/1kLDjDs91N0qm85BoLVbH3Al09v4LN_pa" },
+        { "titulo": "Los mejores rivales / Los rivales más poderosos", "descripcion": "Dragon Ball Z", "info": "Julio 1991", "imagen": "https://lh3.googleusercontent.com/d/1R9BYS8ZqtUZ2C0Nu36zVGOf4pPdMreWU" },
+        { "titulo": "Guerreros de fuerza ilimitada / Los guerreros más poderosos", "descripcion": "Dragon Ball Z", "info": "Marzo 1992", "imagen": "https://lh3.googleusercontent.com/d/1WBJj1qH5gtPbyfyWMoDcMY2F0ySpyHj0" },
+        { "titulo": "Los tres grandes Super Saiyans / La pelea de los tres Saiyajins", "descripcion": "Dragon Ball Z", "info": "Julio 1992", "imagen": "https://lh3.googleusercontent.com/d/1Yct44chN74cdxfZ9bNYF1ivkY8GyhuLY" },
+        { "titulo": "Estalla el duelo / El poder invencible", "descripcion": "Dragon Ball Z", "info": "Marzo 1993", "imagen": "https://lh3.googleusercontent.com/d/1C_ot9R07D6yvo2AXiAw7uztJaZk8zhk_" },
+        { "titulo": "Los guerreros de plata / La galaxia corre peligro", "descripcion": "Dragon Ball Z", "info": "Julio 1993", "imagen": "https://lh3.googleusercontent.com/d/1s9xEKPOGc-1nulMQG0Cuef_bzGSBBw_U" },
+        { "titulo": "El regreso de Broly / El regreso del guerrero legendario", "descripcion": "Dragon Ball Z", "info": "Marzo 1994", "imagen": "https://lh3.googleusercontent.com/d/1PYOnYKFLEcU-pXcVFhVwL_1GJF8CoejI" },
+        { "titulo": "El combate definitivo / El combate final", "descripcion": "Dragon Ball Z", "info": "Julio 1994", "imagen": "https://lh3.googleusercontent.com/d/1c0gsVhK-24jp79MqRrZkZZV33yqBTCHF" },
+        { "titulo": "¡El renacer de la fusión! / La fusión de Goku y Vegeta", "descripcion": "Dragon Ball Z", "info": "Marzo 1995", "imagen": "https://lh3.googleusercontent.com/d/1zhU7lVBjEiiViivwCBjRw_rxvS6FuIMI" },
+        { "titulo": "El ataque del dragón / El ataque del dragón", "descripcion": "Dragon Ball Z", "info": "Julio 1995", "imagen": "https://lh3.googleusercontent.com/d/10g1s8cP-wgrt3x4P-EQKQQdNj87GBXqM" },
+        { "titulo": "El camino hacia el más fuerte / El camino hacia el poder", "descripcion": "Dragon Ball (Especial 10º Aniv.)", "info": "Marzo 1996", "imagen": "https://lh3.googleusercontent.com/d/1YzWZBnF5SVHQ76ZtHzGo_d9--o8AvU3S" },
+        { "titulo": "La batalla de los dioses", "descripcion": "Dragon Ball Z (Moderna)", "info": "Marzo 2013", "imagen": "https://lh3.googleusercontent.com/d/1BXVTWTH1_wW205QretsCiGiwLq5fTxPH" },
+        { "titulo": "La resurrección de Freezer / La resurrección de 'F'", "descripcion": "Dragon Ball Z (Moderna)", "info": "Abril 2015", "imagen": "https://lh3.googleusercontent.com/d/132tuEe-NXEG0zbYYZb307YFL433YTok9" },
+        { "titulo": "Dragon Ball Super: Broly", "descripcion": "Dragon Ball Super", "info": "Diciembre 2018", "imagen": "https://lh3.googleusercontent.com/d/13bM-a9y8l72FiBD0-ZY5qr1HqOQV9Qck" },
+        { "titulo": "Dragon Ball Super: Super Hero", "descripcion": "Dragon Ball Super", "info": "Junio 2022", "imagen": "https://lh3.googleusercontent.com/d/1--0Hiil4UtBmw8ktiXNCla9m1edyCby2" }
     ],
     "videojuegos": [
         { "titulo": "Budokai Tenkaichi 3", "descripcion": "El simulador de combate definitivo.", "imagen": "https://via.placeholder.com/300x450/111/f57c00?text=BT3" },
@@ -153,6 +170,11 @@ var WORLD_DATA = {
         { "id": 6, "dios": "Champa", "angel": "Vados", "info": "Universo gemelo del 7." },
         { "id": 7, "dios": "Beerus", "angel": "Whis", "info": "Nuestro universo.", "highlight": true },
         { "id": 11, "dios": "Belmod", "angel": "Marcarita", "info": "Hogar de Jiren y las Tropas del Orgullo." }
+    ],
+    "biomas": [
+        { "nombre": "Corporación Cápsula", "clima": "Urbano", "descripcion": "Centro tecnológico de West City." },
+        { "nombre": "Montaña Paozu", "clima": "Montañoso", "descripcion": "Hogar de la infancia de Goku." },
+        { "nombre": "Planeta de Beerus", "clima": "Divino", "descripcion": "Lugar de entrenamiento de Goku y Vegeta." }
     ]
 };
 
